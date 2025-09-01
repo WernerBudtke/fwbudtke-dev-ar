@@ -35,10 +35,12 @@ export default function MinecraftStatus() {
   return (
     <div>
       {status.online ? (
-        <p>
-          Server is online! Players: {status.players}/{status.maxPlayers}
-          IP: fwbudtke.zapto.org:25565
-        </p>
+        <div>
+          <p>
+            Server is online! Players: {status.players}/{status.maxPlayers}
+          </p>
+          <p>IP: fwbudtke.zapto.org:25565</p>
+        </div>
       ) : (
         <p>Server is offline 😢</p>
       )}
