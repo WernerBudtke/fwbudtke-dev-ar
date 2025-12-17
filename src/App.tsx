@@ -9,26 +9,26 @@ export default function App() {
   const switchLang = (lng: string) => i18n.changeLanguage(lng)
 
   return (
-    <div>
+    <div className='h-screen flex flex-col items-center bg-gray-200'>
       <Helmet>
         <title>{t('siteTitle')} — Personal site</title>
         <meta name="description" content={t('heroSubtitle')} />
       </Helmet>
-      <header>
-        <nav aria-label="Main navigation">
-          <Typography as="h1" font="creepster">{t('siteTitle')}</Typography>
-          <div>
-            <button onClick={() => switchLang('en')} aria-label="Switch to English">
+      <header className='w-full'>
+        <nav aria-label="Main navigation" className='flex gap-4 items-center border-b-1 border-gray-500 p-2'>
+          <Typography className='text-4xl' as="h1" font="creepster">{t('siteTitle')}</Typography>
+          <div className='flex gap-2'>
+            <button className='button'   onClick={() => switchLang('en')} aria-label="Switch to English">
               EN
             </button>
-            <button onClick={() => switchLang('es')} aria-label="Switch to Spanish">
+            <button  className="button" onClick={() => switchLang('es')} aria-label="Switch to Spanish">
               ES
             </button>
           </div>
         </nav>
       </header>
 
-      <main id="main">
+      <main id="main" className='flex-grow'>
         <section aria-labelledby="hero-title">
           <h2 id="hero-title">{t('heroTitle')}</h2>
           <p>{t('heroSubtitle')}</p>
