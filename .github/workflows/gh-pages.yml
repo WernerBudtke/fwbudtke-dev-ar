@@ -28,8 +28,6 @@ jobs:
   build-and-deploy:
     needs: test-and-a11y
     runs-on: ubuntu-latest
-    permission:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js
