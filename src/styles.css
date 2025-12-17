@@ -1,0 +1,34 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg:#ffffff;
+  --fg:#0a0a0a;
+}
+html,body,#root{height:100%;}
+body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial; background:var(--bg); color:var(--fg);}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:8px;top:8px;width:auto;height:auto;padding:8px;background:#fff;border:1px solid #ccc}
+header{padding:16px;border-bottom:1px solid #eee}
+main{padding:24px}
+button{margin-left:8px}
+
+/* Creepster font utilities */
+.creepster-regular {
+  font-family: "Creepster", system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Utility to apply the creepster font to any element */
+.font-creepster { font-family: var(--font-creepster); }
+
+/* Optional: set a CSS variable if you want to use as primary font */
+:root{ --font-creepster: 'Creepster', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+
+/* Example generic class to apply primary font */
+.font-primary {
+  font-family: var(--font-creepster);
+}
