@@ -1,0 +1,8 @@
+{
+  "siteTitle": "Werner Budtke",
+  "heroTitle": "Hi, I'm Werner",
+  "heroSubtitle": "A small personal landing page built with React + TypeScript.",
+  "cta": "Get in touch",
+  "contactTitle": "Contact",
+  "contactText": "You can reach me via email or follow me on social media."
+}
