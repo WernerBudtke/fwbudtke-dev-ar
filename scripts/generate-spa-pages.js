@@ -66,7 +66,31 @@ async function walk(dir) {
 
       // normalize to posix-like path segments (lowercase is optional)
       await fs.mkdir(outDir, { recursive: true });
-      await fs.writeFile(path.join(outDir, 'index.html'), indexHtml, 'utf8');
+      // Calculate prefix from the generated file back to the dist root so asset links
+      // (which are written as "./assets/..." in the original index.html) resolve
+      // correctly from nested folders like dist/about/index.html -> ../assets/...
+      const relToDist = path.relative(outDir, distDir);
+      // Normalize to posix-style and ensure trailing slash when not empty
+      const prefix = relToDist === '' ? './' : relToDist.split(path.sep).join('/') + '/';
+
+      // Replace asset references so nested index.html files resolve back to dist root.
+      // First, fix ./assets/... which Vite writes in the root index.html.
+      let adjusted = indexHtml.replace(/(href|src)=["']\.\/assets\//g, `$1="${prefix}assets/`);
+
+      // Patterns for icons and manifests we commonly include in the head.
+      const patterns = [
+        'apple-touch-icon[^"\']*',
+        'favicon[^"\']*',
+        'mstile[^"\']*',
+        'site\\.webmanifest',
+      ];
+
+      for (const pat of patterns) {
+        const re = new RegExp(`(href|src|content)=(\"|\')\\.\/(${pat})\\2`, 'g');
+        adjusted = adjusted.replace(re, `$1=$2${prefix}$3$2`);
+      }
+
+      await fs.writeFile(path.join(outDir, 'index.html'), adjusted, 'utf8');
       console.log('Wrote', path.join(outDir, 'index.html'));
     }
 
