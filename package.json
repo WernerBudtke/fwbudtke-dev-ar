@@ -60,13 +60,4 @@
     "vite": "^7.3.0",
     "vitest": "^4.0.16"
   }
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ],
-    "*.{css,md,json}": [
-      "prettier --write"
-    ]
-  }
 }
