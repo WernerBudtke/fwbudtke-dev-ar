@@ -7,13 +7,46 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="navbar bg-neutral flex justify-between flex-wrap">
-      <nav className="flex items-center gap-2">
+    <header className="navbar bg-neutral flex justify-between">
+      <div className="navbar-start">
+        <div className="dropdown sm:hidden">
+          <Link to="/" role="button" tabIndex={0} className="btn btn-ghost">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </Link>
+          <nav tabIndex={-1}>
+            <ul className="menu menu-sm dropdown-content z-1 shadow bg-accent-content rounded-box w-52 gap-2">
+              <li>
+                <Link to="/">{t('navigationLinkHome')}</Link>
+              </li>
+              <li>
+                <Link to="/about">{t('navigationLinkAbout')}</Link>
+              </li>
+              <li>
+                <Link to="/contact">{t('navigationLinkContact')}</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div className="hidden sm:block">
-          <Link to="/" className="btn btn-base text-primary text-2xl ">
+          <Link to="/" className="btn btn-base text-primary text-2xl" role="button">
             <Typography as="h1">F. W. BUDTKE</Typography>
           </Link>
         </div>
+      </div>
+      <nav className="navbar-center hidden sm:flex">
         <ul className="menu menu-horizontal">
           <li>
             <Link to="/">{t('navigationLinkHome')}</Link>
@@ -26,7 +59,9 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <LanguageSelector />
+      <div className="navbar-end">
+        <LanguageSelector />
+      </div>
     </header>
   );
 };
