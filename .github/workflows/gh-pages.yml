@@ -2,7 +2,7 @@ name: CI — build, test, a11y, deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test-and-a11y:
@@ -44,3 +44,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          # Preserve custom domain if a CNAME file exists in the repository root
+          # Set this to a domain string (e.g. 'example.com') or 'true' to copy
+          # the repository's CNAME file into the published branch.
+          cname: true
