@@ -11,7 +11,7 @@ function Typography<E extends React.ElementType = 'p'>(
   props: TypographyProps<E>,
   ref: React.ForwardedRef<any>
 ) {
-  const { as, font = 'system', className, children, ...rest } = props as any;
+  const { as, font = 'creepster', className, children, ...rest } = props as any;
   const Component: any = as || 'p';
   const fontClass = font === 'creepster' ? 'creepster-regular' : 'font-primary';
   const cls = [fontClass, className].filter(Boolean).join(' ');
