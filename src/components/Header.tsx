@@ -7,11 +7,13 @@ const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="navbar bg-neutral flex justify-between">
+    <header className="navbar bg-neutral flex justify-between flex-wrap">
       <nav className="flex items-center gap-2">
-        <Link to="/" className="btn btn-base text-primary text-2xl">
-          <Typography as="h1">F. W. BUDTKE</Typography>
-        </Link>
+        <div className="hidden sm:block">
+          <Link to="/" className="btn btn-base text-primary text-2xl ">
+            <Typography as="h1">F. W. BUDTKE</Typography>
+          </Link>
+        </div>
         <ul className="menu menu-horizontal">
           <li>
             <Link to="/">{t('navigationLinkHome')}</Link>
