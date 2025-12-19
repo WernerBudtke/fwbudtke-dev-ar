@@ -1,5 +1,17 @@
 {
   "navigationLinkHome": "Inicio",
-  "navigationLinkAbout": "Acerca de mi",
-  "navigationLinkContact": "Contacto"
+  "navigationLinkAbout": "Sobre mí",
+  "navigationLinkContact": "Contacto",
+  "homeHeroTitle": "¡Bienvenido a esta parte de Internet! donde mandan las fuentes feas y no seguimos estándares aprobados de UX.",
+  "homeHeroSubtitleQuestion": "¿QUIÉN SOY?",
+  "homeHeroSubtitleAnswer": "Soy Federico Werner Budtke, un ingeniero de software de Argentina.",
+  "homeHeroSitePurposeQuestion": "¿QUÉ ES ESTE SITIO?",
+  "homeHeroSitePurposeAnswer": "Una pequeña página personal creada para satisfacer mi necesidad de tener un sitio personal.",
+  "homeHeroTechStackQuestion": "¿STACK TECNOLÓGICO?",
+  "homeHeroTechStackAnswer": "Este sitio está construido con React, TanStack Router, TypeScript, Vite, TailwindCSS y DaisyUI.",
+  "homeHeroShowBonusQuestion": "Mostrar pregunta extra",
+  "homeHeroBonusQuestion": "PREGUNTA EXTRA: ¿POR QUÉ NO UN ACORDEÓN?",
+  "homeHeroBonusAnswer": "Porque los acordeones están hechos para tocar música, no para usarse en interfaces de usuario.",
+  "homeHeroEasterEggQuestion": "¿POR QUÉ LA FUENTE?",
+  "homeHeroEasterEggAnswer": "( ͡° ͜ʖ ͡°) pero en Español."
 }

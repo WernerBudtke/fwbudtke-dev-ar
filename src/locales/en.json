@@ -9,8 +9,8 @@
   "homeHeroSitePurposeAnswer": "A small personal homepage made to comply with my need to have a personal site.",
   "homeHeroTechStackQuestion": "TECH STACK?",
   "homeHeroTechStackAnswer": "This site is built with React, TanStack Router, TypeScript, Vite, TailwindCSS and DaisyUI.",
-  "homeHeroBonusQuestion": "BONUS QUESTION: WHY NOT AN ACCORDION?",
   "homeHeroShowBonusQuestion": "Show Bonus Question",
+  "homeHeroBonusQuestion": "BONUS QUESTION: WHY NOT AN ACCORDION?",
   "homeHeroBonusAnswer": "Because accordions are meant to play music, not to be used in UIs.",
   "homeHeroEasterEggQuestion": "WHY THE FONT?",
   "homeHeroEasterEggAnswer": "( ͡° ͜ʖ ͡°)"
