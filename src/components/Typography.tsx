@@ -22,6 +22,8 @@ function Typography<E extends React.ElementType = 'p'>(
   );
 }
 
+Typography.displayName = 'Typography';
+
 export default React.forwardRef(Typography) as <E extends React.ElementType = 'p'>(
   props: TypographyProps<E> & { ref?: React.Ref<any> }
 ) => React.ReactElement | null;

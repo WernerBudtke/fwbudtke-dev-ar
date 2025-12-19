@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './withLayout.module.css';
 import Header from './Header';
+import Footer from './Footer';
 
 export function withLayout<P extends Record<string, unknown>>(
   Component: React.ComponentType<P>
@@ -8,10 +9,10 @@ export function withLayout<P extends Record<string, unknown>>(
   const Wrapped: React.FC<P> = (props) => (
     <div className={styles.wrapper}>
       <Header />
-      <main>
+      <main className={styles.main}>
         <Component {...props} />
       </main>
-      <footer>Footer</footer>
+      <Footer />
     </div>
   );
 

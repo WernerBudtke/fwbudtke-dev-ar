@@ -1,8 +1,5 @@
 {
-  "siteTitle": "Werner Budtke",
-  "heroTitle": "Hola, soy Werner",
-  "heroSubtitle": "Una pequeña página de inicio personal hecha con React + TypeScript.",
-  "cta": "Contactarme",
-  "contactTitle": "Contacto",
-  "contactText": "Puedes contactarme por correo electrónico o seguirme en redes sociales."
+  "navigationLinkHome": "Inicio",
+  "navigationLinkAbout": "Acerca de mi",
+  "navigationLinkContact": "Contacto"
 }

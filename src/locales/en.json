@@ -1,8 +1,17 @@
 {
-  "siteTitle": "Werner Budtke",
-  "heroTitle": "Hi, I'm Werner",
-  "heroSubtitle": "A small personal landing page built with React + TypeScript.",
-  "cta": "Get in touch",
-  "contactTitle": "Contact",
-  "contactText": "You can reach me via email or follow me on social media."
+  "navigationLinkHome": "Home",
+  "navigationLinkAbout": "About Me",
+  "navigationLinkContact": "Contact",
+  "homeHeroTitle": "Welcome to this part of the internet! where ugly fonts rule and we go by no UX approved standards.",
+  "homeHeroSubtitleQuestion": "WHO I AM?",
+  "homeHeroSubtitleAnswer": "I'm Federico Werner Budtke, a software engineer from Argentina.",
+  "homeHeroSitePurposeQuestion": "WHAT IS THIS SITE?",
+  "homeHeroSitePurposeAnswer": "A small personal homepage made to comply with my need to have a personal site.",
+  "homeHeroTechStackQuestion": "TECH STACK?",
+  "homeHeroTechStackAnswer": "This site is built with React, TanStack Router, TypeScript, Vite, TailwindCSS and DaisyUI.",
+  "homeHeroBonusQuestion": "BONUS QUESTION: WHY NOT AN ACCORDION?",
+  "homeHeroShowBonusQuestion": "Show Bonus Question",
+  "homeHeroBonusAnswer": "Because accordions are meant to play music, not to be used in UIs.",
+  "homeHeroEasterEggQuestion": "WHY THE FONT?",
+  "homeHeroEasterEggAnswer": "( ͡° ͜ʖ ͡°)"
 }
